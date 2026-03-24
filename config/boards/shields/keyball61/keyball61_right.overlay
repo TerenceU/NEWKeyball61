@@ -75,6 +75,10 @@ nice_view_spi: &spi2 {
     cs-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 };
 
+&nice_view_spi {
+    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
+};
+
 &spi1 {
     status = "okay";
     compatible = "nordic,nrf-spim";

@@ -26,6 +26,14 @@ Ho corretto una fonte di confusione reale nella configurazione layer:
 
 Il comportamento runtime non e' stato cambiato intenzionalmente: ora i layer sono espressi con nomi coerenti (`NUM`, `SYM`, `FUN`, `MOUSE`, `SCROLL`, `SNIPE`) invece di numeri ambigui.
 
+Sul branch `niceview` c'era anche un problema di porting del display:
+
+- il lato destro era buildato con `nice_view` ma senza `nice_view_adapter`
+- il base shield continuava a forzare `zephyr,display = &oled`
+- gli overlay sinistro e destro lasciavano ancora attivo l'`ssd1306` I2C originale
+
+Con `nice_view`, questo creava sovrapposizioni di pin con il display vecchio e poteva causare instabilita', disconnessioni o comportamenti simili a sleep del lato periferico.
+
 ## Perche' la sinistra puo' sembrare "non connessa"
 
 Per il sintomo che hai descritto ("si accende ma non si collega alla destra"), le cause piu' probabili sono:

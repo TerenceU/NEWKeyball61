@@ -34,6 +34,14 @@ Sul branch `niceview` c'era anche un problema di porting del display:
 
 Con `nice_view`, questo creava sovrapposizioni di pin con il display vecchio e poteva causare instabilita', disconnessioni o comportamenti simili a sleep del lato periferico.
 
+Per ridurre i problemi BLE del lato sinistro, la configurazione `niceview` ora tratta la meta' sinistra come **headless**:
+
+- il firmware sinistro non builda piu' `nice_view`
+- il display e l'I2C del lato sinistro sono disabilitati
+- il lato destro resta l'unica meta' con display
+
+Questo evita il conflitto reale tra matrix e display sul lato sinistro (`pro_micro 20` era usato sia come colonna matrix sia come `TWIM_SCL`).
+
 ## Perche' la sinistra puo' sembrare "non connessa"
 
 Per il sintomo che hai descritto ("si accende ma non si collega alla destra"), le cause piu' probabili sono:

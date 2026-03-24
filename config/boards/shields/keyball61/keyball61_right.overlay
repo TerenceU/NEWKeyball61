@@ -3,6 +3,10 @@
  *
  * SPDX-License-Identifier: MIT
  */
+
+#define MOUSE   4
+#define SCROLL  5
+#define SNIPE   6
  
 #include "keyball61.dtsi"
 
@@ -86,9 +90,9 @@ nice_view_spi: &spi2 {
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        scroll-layers = <5>;
-	snipe-layers = <6>;
-	automouse-layer = <4>; 
+        automouse-layer = <MOUSE>;
+        scroll-layers = <SCROLL>;
+        snipe-layers = <SNIPE>;
     };
 };
 
@@ -140,4 +144,3 @@ nice_view_spi: &spi2 {
 
   };
 };
-

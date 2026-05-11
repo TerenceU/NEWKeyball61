@@ -28,39 +28,53 @@
 
 / {
     macros {
-        e: new_macro {
+        // Accented vowels via Compose key (Menu) + grave + letter.
+        // Requires: Linux → setxkbmap -option compose:menu
+        //           Windows → WinCompose configured with Menu key
+        // Colemak remapping: physical K=e, L=i, ;=o, A=a, I=u
+        e: e_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LBKT>;  // è on IT layout
-            label = "NEW_MACRO";
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp K_APP &kp GRAVE &kp K>;
+            label = "E_GRAVE";
         };
 
-        i: i {
+        i: i_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>;  // ì on IT layout
-            label = "I";
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp K_APP &kp GRAVE &kp L>;
+            label = "I_GRAVE";
         };
 
-        o: o {
+        o: o_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SEMI>;  // ò on IT layout
-            label = "O";
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp K_APP &kp GRAVE &kp SEMI>;
+            label = "O_GRAVE";
         };
 
-        a: a {
+        a: a_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SQT>;  // à on IT layout
-            label = "A";
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp K_APP &kp GRAVE &kp A>;
+            label = "A_GRAVE";
         };
 
-        u: u {
+        u: u_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp NON_US_HASH>;  // ù on IT layout
-            label = "U";
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp K_APP &kp GRAVE &kp I>;
+            label = "U_GRAVE";
         };
     };
 

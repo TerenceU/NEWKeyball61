@@ -6,11 +6,7 @@
 
 #include "keyball61.dtsi"
 
-/ {
-    chosen {
-        /delete-property/ zephyr,display;
-    };
-};
+
 
 &kscan0 {
 	row-gpios
@@ -49,7 +45,7 @@
 };
 
 &i2c0 {
-    status = "disabled";
+    status = "okay";
     compatible = "nordic,nrf-twi";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;

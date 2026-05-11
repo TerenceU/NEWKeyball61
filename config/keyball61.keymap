@@ -31,35 +31,35 @@
         e: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&kp LBKT>;  // è on IT layout
             label = "NEW_MACRO";
         };
 
         i: i {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&kp EQUAL>;  // ì on IT layout
             label = "I";
         };
 
         o: o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&kp SEMI>;  // ò on IT layout
             label = "O";
         };
 
         a: a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&kp SQT>;  // à on IT layout
             label = "A";
         };
 
         u: u {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&kp NON_US_HASH>;  // ù on IT layout
             label = "U";
         };
     };

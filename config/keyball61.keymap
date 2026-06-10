@@ -89,7 +89,7 @@
 &kp TAB         &kp Q     &kp W         &kp E         &kp R        &kp T                              &kp Y      &kp U   &kp I      &kp O    &kp P          &kp DEL
 &kp ESC         &kp A     &kp S         &kp D         &kp F        &kp G                              &kp H      &kp J   &kp K      &kp L    &kp SEMI       &kp SQT
 &kp LEFT_SHIFT  &kp Z     &kp X         &kp C         &kp V        &kp B        &tog 4     &tog 4     &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
-&kp LCTRL       &kp RALT  &kp LEFT_ALT  &kp LEFT_WIN  &lt 3 SPACE  &lt 2 SPACE  &kp SPACE  &lt 7 RET  &lt 1 RET                              &kp RIGHT_ALT  &kp RCTRL
+&kp LCTRL       &kp RALT  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 SPACE  &lt 2 SPACE  &kp SPACE  &lt 7 RET  &lt 1 RET                              &kp RIGHT_ALT  &kp RCTRL
             >;
         };
 
@@ -164,8 +164,8 @@
             label = "accent";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &e      &i      &o      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &u      &trans  &trans  &trans
+&trans  &a      &trans  &trans  &trans  &trans                  &trans  &trans  &e      &i      &o      &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
             >;
